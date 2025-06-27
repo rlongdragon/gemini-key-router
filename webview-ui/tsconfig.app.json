@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "types": ["vite/client"], // 添加 vite/client 類型
+
+    /* Bundler mode */
+    "moduleResolution": "node", // 更改為 node
+    // "allowImportingTsExtensions": true, // 移除
+    // "verbatimModuleSyntax": true, // 移除
+    // "moduleDetection": "force", // 移除
+    // "noEmit": true, // 移除 noEmit
+    "composite": true, // 添加 composite
+    "jsx": "react-jsx",
+    "declarationDir": "dist", // 添加 declarationDir
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // "erasableSyntaxOnly": true, // 移除
+    "noFallthroughCasesInSwitch": true,
+    // "noUncheckedSideEffectImports": true // 移除
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"] // 移除 dist
+}

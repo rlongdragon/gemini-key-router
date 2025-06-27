@@ -9,13 +9,24 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:gemini-key-router.openPanel1",
+    "onCommand:gemini-key-router.openPanel2"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "gemini-key-router.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "gemini-key-router.openPanel1",
+        "title": "Open Panel 1"
+      },
+      {
+        "command": "gemini-key-router.openPanel2",
+        "title": "Open Panel 2"
       }
     ]
   },

@@ -23,7 +23,19 @@ const esbuildProblemMatcherPlugin = {
 	},
 };
 
+const { execSync } = require('child_process'); // 引入 child_process 模組
+
 async function main() {
+	// 構建 webview-ui 專案
+	console.log('Building webview-ui project...');
+	try {
+		execSync('npm run build', { cwd: 'webview-ui', stdio: 'inherit' });
+		console.log('webview-ui project built successfully.');
+	} catch (error) {
+		console.error('Failed to build webview-ui project:', error);
+		process.exit(1);
+	}
+
 	const ctx = await esbuild.context({
 		entryPoints: [
 			'src/extension.ts'
